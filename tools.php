@@ -380,7 +380,7 @@ function emailAlerts($host,$statusMsg) {
     global $notify_from;
     global $notify_alert;
     global $URL;
-    if (($notify_to) && ($statusMsg) { # && ( muffleAlerts($host))) {
+    if (($notify_to) && ($statusMsg)) { # && ( muffleAlerts($host))) {
         $to      = $notify_alert . "," . $notify_to;
         $subject = "ALERT: License Server at " . $host['hostname'] . " is DOWN" ;
         $headers = "From: License Robot <" . $notify_from . ">\r\n" .
