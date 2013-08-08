@@ -241,7 +241,6 @@ function writeLicense_Usage($usage) {
     if (isset($usage) && is_array($usage)) {
         # build sql stmt
         $sql = $sql1 . "VALUES ('$usage[0]','$usage[1]','$date','$time',$usage[2])";
-        echo $sql
 
         # build rrd stmt
         # rrd filename is combination of server and feature
@@ -255,7 +254,6 @@ function writeLicense_Usage($usage) {
         } else {
             if ( isset($db_hostname) && isset($db_username) && isset($db_password) ) {
                 $recordset = $db->query($sql);
-                echo $recordset
                 if (DB::isError($recordset)) {
                     print_sql($sql);
                     die ($recordset->getMessage());
