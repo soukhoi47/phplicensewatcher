@@ -412,9 +412,9 @@ function muffleAlerts($host) {
     }
 
     # check for records
-    #$sql ="SELECT pkid from alert_events where type = '" . $host['type'] . "' and hostname = '" . $host['hostname'] . "' and datetime > '" . $alertdate . "' and datetime < '" . $mysqldate . "'";
+    $sql ="SELECT pkid from alert_events where type = '" . $host['type'] . "' and hostname = '" . $host['hostname'] . "' and datetime > '" . $alertdate . "' and datetime < '" . $mysqldate . "'";
 
-    $recordset = $db->query($sql);
+    #$recordset = $db->query($sql);
     if (DB::isError($recordset)) {
         print_sql($sql);
         die ($recordset->getMessage());
