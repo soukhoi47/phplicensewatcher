@@ -66,6 +66,6 @@ $log_file[]="";
 $server[] = array("hostname"=>"2700@localhost","desc"=>"local","type"=>"lmutil");
 
 # monitor list
-$monitor_license[] = array("feature"=>"abaqus","description"=>"abaqus");
+$monitor_license[] = array("feature"=>"ABAQUSLM","description"=>"abaqus");
 #$monitor_license[] = array("feature"=>"nuke_i","description"=>"Nuke (GUI)");
 ?>
