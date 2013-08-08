@@ -59,6 +59,7 @@ foreach ($server as $host) {
             # do we need to push per feature?
             if ($push) {
                 $usage = array($server,$feature_name,$key['licenses_used'],$key['num_licenses']);
+                echo $usage
                 writeLicense_Usage($usage);
             }
 
