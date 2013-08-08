@@ -63,7 +63,7 @@ $legendpoints="";
 $log_file[]="";
 
 # server list
-$server[] = array("hostname"=>"2700@localhost","desc"=>"local","type"=>"flexlm");
+$server[] = array("hostname"=>"27000@localhost","desc"=>"local","type"=>"flexlm");
 
 # monitor list
 $monitor_license[] = array("feature"=>"ABAQUSLM","description"=>"abaqus");
