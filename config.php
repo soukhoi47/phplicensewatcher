@@ -17,15 +17,15 @@ $cactiurl="http://cacti.example.com/graph.php?action=view&rra_id=all&local_graph
 $cactigraph="http://cacti.example.com/graph_image.php?action=view&local_graph_id=";
 
 # utils used to gather info
-$lmutil_loc="/usr/local/bin/lmutil";
-$lmutil="/usr/local/bin/lmutil";
+$lmutil_loc="/opt/abq/abq_lic/License/lmutil";
+$lmutil="/opt/abq/abq_lic/License/lmutil";
 $lmstat_loc=$lmutil_loc . " lmstat"; 
-$spmstat="/usr/local/bin/spmstat";
-$rvlstatus="/usr/local/bin/rvlstatus";
-$sesictrl="/usr/local/bin/sesictrl";
-$tlm_server="export LD_LIBRARY_PATH=/usr/local/lib ; /usr/local/bin/tlm_server";
-$rlmstat="/usr/local/bin/rlmutil rlmstat";
-$pixar_query="/usr/local/bin/pixar_query.sh";
+$spmstat="";
+$rvlstatus="";
+$sesictrl="";
+$tlm_server="";
+$rlmstat="";
+$pixar_query="";
 
 # emailed alerts
 $URL="http://" . $_SERVER['HTTP_HOST'] . substr($_SERVER['REQUEST_URI'],0,strrpos($_SERVER['REQUEST_URI'],"/")) . "/"; 
@@ -48,9 +48,9 @@ $collection_interval=5;
 # db info
 $db_type="mysql";
 $db_hostname="localhost";
-$db_username="phplic";
-$db_password="phplic";
-$db_database="phplicensewatcher";
+$db_username="licenses";
+$db_password="licenses";
+$db_database="licenses";
 $dsn = "mysql://$db_username:$db_password@$db_hostname/$db_database";
 
 # table/graph info
@@ -63,9 +63,9 @@ $legendpoints="";
 $log_file[]="";
 
 # server list
-//$server[] = array("hostname"=>"","desc"=>"","type"=>"");
+$server[] = array("hostname"=>"2700@localhost","desc"=>"local","type"=>"lmutil");
 
 # monitor list
-$monitor_license[] = array("feature"=>"nuke_r","description"=>"Nuke Render");
-$monitor_license[] = array("feature"=>"nuke_i","description"=>"Nuke (GUI)");
+$monitor_license[] = array("feature"=>"abaqus","description"=>"abaqus");
+#$monitor_license[] = array("feature"=>"nuke_i","description"=>"Nuke (GUI)");
 ?>
