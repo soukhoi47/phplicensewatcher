@@ -380,7 +380,7 @@ function emailAlerts($host,$statusMsg) {
     global $notify_from;
     global $notify_alert;
     global $URL;
-    if (($notify_to) && ($statusMsg) && (muffleAlerts($host))) {
+    if (($notify_to) && ($statusMsg) { # && ( muffleAlerts($host))) {
         $to      = $notify_alert . "," . $notify_to;
         $subject = "ALERT: License Server at " . $host['hostname'] . " is DOWN" ;
         $headers = "From: License Robot <" . $notify_from . ">\r\n" .
@@ -414,7 +414,7 @@ function muffleAlerts($host) {
     # check for records
     $sql ="SELECT pkid from alert_events where type = '" . $host['type'] . "' and hostname = '" . $host['hostname'] . "' and datetime > '" . $alertdate . "' and datetime < '" . $mysqldate . "'";
 
-    #$recordset = $db->query($sql);
+    $recordset = $db->query($sql);
     if (DB::isError($recordset)) {
         print_sql($sql);
         die ($recordset->getMessage());
