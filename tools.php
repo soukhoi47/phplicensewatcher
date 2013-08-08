@@ -236,7 +236,6 @@ function writeLicense_Usage($usage) {
         die ($db->getMessage());
     }
     $sql1 = "INSERT INTO license_usage (flmusage_server,flmusage_product,flmusage_date,flmusage_time,flmusage_users) ";
-    echo $sql1
 
     if (isset($usage) && is_array($usage)) {
         # build sql stmt
